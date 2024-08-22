@@ -28,8 +28,7 @@ console.log(removedItem);
 
 // 5. A delivery of 25 more parts arrived. Add the value 25 to the end of the array
 console.log('5. Add the value 25 into supplyChanges.');
- partsNeeded = [];
-supplyChanges = partsNeeded.push(25);
+ supplyChanges.push(25);
 console.log(partsNeeded);
 
 // 6. Create three new variables named 'positives', 'negatives', and
@@ -44,7 +43,7 @@ let positives = [];
 let negatives = []; 
 let zeroes = [];
 
-supplyChanges = [3, 5, -6, 0, 7, 11];
+///supplyChanges = [3, 5, -6, 0, 7, 11];
 
 // loop through the supplyChanges array
 for (let i=0; i < supplyChanges.length; i++){
@@ -74,19 +73,22 @@ let stretchNegatives = [];
 let stretchZeroes = [];
 
 // for loop array 
-for (let value of supplyChanges )
+for (let value of supplyChanges ) {
+  console.log(value);
   if (value > 0) {
-    stretchPositives.push(supplyChanges[i]); 
+    stretchPositives.push(value); 
   }
-   if (value < 0) {
-    stretchNegatives.push(supplyChanges[i]);
+   else if (value < 0) {
+    stretchNegatives.push(value);
    } else {
-    stretchZeroes.push(supplyChanges[i]);
+    stretchZeroes.push(value);
    }
   // output of results 
   console.log(stretchPositives); 
   console.log(stretchNegatives);
   console.log(stretchZeroes);
+}
+  
 
 // 8. Create a variable called 'totalParts' and assign it a value of 0.
 //    Then, write a loop that adds each value of the 'supplyChanges'
@@ -94,10 +96,9 @@ for (let value of supplyChanges )
 console.log('8. Looping through supplyChanges to calculate the sum:');
 
 let totalParts = 0; 
-// loop for totalParts array
-for (i=0; i< totalParts.length; i++){
-  if (totalParts += supplyChanges[i]);{  
-  }
+// loop for supply changes array
+for (i=0; i< supplyChanges.length; i++){
+   (totalParts += supplyChanges[i]);  
 }
 // output results 
 console.log(totalParts);
@@ -117,7 +118,7 @@ console.log('9. Filling boxes with a "while" loop');
 
 let parts = 572; 
 let boxesFilled = 0; 
-while (parts <= 7) {
+while (parts >= 7) {
   parts -= 7; 
   boxesFilled ++;
 }
